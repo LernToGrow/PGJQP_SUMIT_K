@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+  
+           <hibernate-mapping>  
+          <class name="com.nitt.model.Employee" table="EMPLOYETABLENEW">  
+          <id name="employeeId">  
+          <generator class="increment"></generator>  
+          </id>  
+          <property name="name"></property>  
+          <property name="email"></property>  
+            
+          <one-to-one name="address" cascade="all"></one-to-one>  
+          </class>  
+            
+          </hibernate-mapping>  
