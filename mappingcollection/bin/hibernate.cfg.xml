@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class" >com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="connection.url">jdbc:sqlserver://SAM;databasename=myhibernate</property>
+        <property name="connection.username">sa</property>
+        <property name="connection.password">root</property>
+        <property name="dialect">org.hibernate.dialect.SQLServer2008Dialect</property>
+        <property name="hbm2ddl.auto">update</property>
+         <property name="Show_sql">true</property>
+        <property name="format_sql">true</property>
+<!--    	   	<mapping resource="com/set/model/Question.hbm.xml"/>
+   		<mapping resource="com/niit/model/Student.hbm.xml"/> 
+   		<mapping resource="com/list/model/QuestionList.hbm.xml"/>
+   		<mapping resource="com/bag/model/QuestionBag.hbm.xml"/>	 -->  		
+   		<mapping resource="com/one_to_many/model/Question.hbm.xml"/>    	
+  	   	<mapping resource="com/many_to_one/model/employee.hbm.xml"/>
+  	   	<mapping resource="com/many_to_one/model/address.hbm.xml"/>
+  	   	<mapping resource="com/many_to_many/model/questionmtm.hbm.xml"/>
+		<mapping resource="com/many_to_many/model/addressmtm.hbm.xml"/>
+		
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- <hibernate-mapping>
+<class name="com.set.model.Question" table="QUESTION">
+<id name="id" type="int" column="QUESTION_ID"> 
+<generator class="incremenet"/>
+</id>
+<property name="qname" type="string" column="QUESTION_NAME"/>
+<set name="answers" table="ANSWERS">
+<key column="qid"/>
+<element column="ANSWERS" type="string"/>
+</set>
+</class>
+</hibernate-mapping> -->
+  
+
+ <hibernate-mapping>  
+ <class name="com.set.model.Question" table="QUESTION">  
+   <id name="id">  
+     <generator class="increment"></generator>  
+   </id>  
+   <property name="qname"></property>  
+            
+   <set name="answers" table="ANSWER">  
+     <key column="qid"></key>  
+     <element column="answer" type="string"></element>  
+   </set>  
+            
+ </class>  
+            
+</hibernate-mapping> 

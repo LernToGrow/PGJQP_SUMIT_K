@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>  
+          <class name="com.one_to_one.model.QuestionOTO" table="QUESTIONOTO">  
+          <id name="id">  
+          <generator class="increment"></generator>  
+          </id>  
+          <property name="qname"></property>  
+            
+          <list name="answers" cascade="all">  
+          <key column="qid"></key>  
+          <index column="type"></index>  
+          <one-to-many class="com.one_to_one.model.AnswerOTO"/>  
+          </list>  
+            
+          </class>  
+            
+          <class name="com.one_to_one.model.AnswerOTO" table="ANSWEROTO">  
+          <id name="id">  
+          <generator class="increment"></generator>  
+          </id>  
+          <property name="answername"></property>  
+          <property name="postedBy"></property>  
+          </class>  
+            
+          </hibernate-mapping>  
